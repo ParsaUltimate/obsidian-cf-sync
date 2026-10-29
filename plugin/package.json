@@ -1,0 +1,27 @@
+{
+  "name": "obsidian-cf-sync-plugin",
+  "version": "1.0.0",
+  "description": "End-to-End Encrypted Real-Time Sync for Obsidian on Cloudflare",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "sync",
+    "e2ee",
+    "cloudflare"
+  ],
+  "author": "Parsa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "esbuild": "^0.25.0",
+    "obsidian": "latest",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  }
+}

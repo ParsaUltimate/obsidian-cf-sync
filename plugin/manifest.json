@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-cf-sync",
+  "name": "Cloudflare E2EE Sync",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Production-grade, End-to-End Encrypted, Real-Time Sync powered by Cloudflare Free Tier (Workers + Durable Objects + R2). 100% mobile compatible.",
+  "author": "Parsa",
+  "authorUrl": "https://github.com",
+  "isDesktopOnly": false
+}

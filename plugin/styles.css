@@ -1,0 +1,142 @@
+/* Obsidian Cloudflare E2EE Sync Styles */
+
+/* Status Bar Item */
+.cf-sync-status-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--font-ui-smaller);
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.cf-sync-status-bar:hover {
+  opacity: 0.85;
+}
+
+.cf-sync-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cf-sync-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Status variants */
+.cf-sync-status-bar.is-syncing {
+  color: var(--text-accent);
+}
+
+.cf-sync-status-bar.is-syncing .cf-sync-icon svg {
+  animation: cf-sync-spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.cf-sync-status-bar.is-synced {
+  color: var(--text-success, #34d399);
+}
+
+.cf-sync-status-bar.is-offline {
+  color: var(--text-muted);
+}
+
+.cf-sync-status-bar.is-conflict {
+  color: var(--text-warning, #f59e0b);
+  font-weight: 600;
+}
+
+.cf-sync-status-bar.is-error {
+  color: var(--text-error, #ef4444);
+}
+
+@keyframes cf-sync-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Conflict and Info Modals */
+.cf-sync-modal {
+  padding: 8px 12px;
+}
+
+.cf-sync-modal h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-sync-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+  background-color: var(--background-secondary);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.cf-sync-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-sync-stat-label {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cf-sync-stat-value {
+  font-size: var(--font-ui-medium);
+  font-weight: 600;
+  color: var(--text-normal);
+  margin-top: 2px;
+}
+
+.cf-sync-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cf-sync-danger-zone {
+  border: 1px solid var(--text-error, #ef4444);
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.cf-sync-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cf-sync-badge-ok {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.cf-sync-badge-warn {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.cf-sync-badge-err {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+plugin/node_modules/
+package-lock.json
+backend/package-lock.json
+plugin/package-lock.json
+
+# Cloudflare Wrangler & Build Artifacts
+.wrangler/
+.mf/
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & Local Secrets
+*.log
+.env
+.env.*
+!.env.example

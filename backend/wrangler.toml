@@ -1,0 +1,17 @@
+name = "obsidian-realtime-sync"
+main = "src/index.ts"
+compatibility_date = "2025-02-01"
+
+[durable_objects]
+bindings = [
+  { name = "VAULT_SYNC_DO", class_name = "VaultSyncDO" }
+]
+
+# CRITICAL: Free tier requires new_sqlite_classes for SQLite storage backend
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VaultSyncDO"]
+
+[[r2_buckets]]
+binding = "VAULT_BUCKET"
+bucket_name = "obsidian-sync-blobs"
